@@ -1,195 +1,37 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Artyom Ivashenko · Senior iOS &amp; React Native engineer, MVPs in 3–4 weeks</title>
-<meta name="description" content="Artyom Ivashenko builds mobile products from zero to App Store in 3–4 weeks: iOS (Swift, SwiftUI) and React Native, backend, subscriptions, release. 5 years, 14 apps shipped, a 60K MAU product and a mobile bank with 20K customers. Available for contract work.">
+<title>Артём Иващенко · Senior iOS и React Native разработчик, MVP за 3–4 недели</title>
+<meta name="description" content="Артём Иващенко делает мобильные продукты под ключ за 3–4 недели: iOS (Swift, SwiftUI) и React Native, бэкенд, подписки, релиз в App Store. 5 лет в мобильной разработке, 14 приложений, продукт на 60K MAU и мобильный банк на 20K клиентов. Беру проекты на контракт.">
 <link rel="canonical" href="https://ivashenko.work/">
+<link rel="alternate" hreflang="ru" href="https://ivashenko.work/">
+<link rel="alternate" hreflang="en" href="https://ivashenko.work/en/">
+<link rel="alternate" hreflang="x-default" href="https://ivashenko.work/">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/landing.css">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Artyom Ivashenko · iOS & React Native products in 3–4 weeks">
-<meta property="og:description" content="Senior mobile engineer. 14 apps shipped, 60K MAU product, mobile bank with 20K customers. Available for contract work.">
+<meta property="og:title" content="Артём Иващенко · iOS и React Native продукты за 3–4 недели">
+<meta property="og:description" content="Senior мобильный разработчик. 14 приложений, продукт на 60K MAU, мобильный банк на 20K клиентов. Беру проекты на контракт.">
 <meta property="og:url" content="https://ivashenko.work/">
 <meta property="og:image" content="https://ivashenko.work/assets/og-home.png">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Artyom Ivashenko","alternateName":"Артём Иващенко","jobTitle":"Senior iOS and React Native Engineer","url":"https://ivashenko.work/","image":"https://ivashenko.work/assets/images/artyom-portrait.jpg","email":"mailto:artyom@ivashenko.work","address":{"@type":"PostalAddress","addressLocality":"Tashkent","addressCountry":"UZ"},"sameAs":["https://t.me/iv_ashenko","https://www.linkedin.com/in/artyom-ivashenko","https://github.com/ivashhchenko"],"knowsAbout":["iOS","Swift","SwiftUI","React Native","Mobile app development","App Store release","Subscriptions"]}
+{"@context":"https://schema.org","@type":"Person","name":"Артём Иващенко","alternateName":"Artyom Ivashenko","jobTitle":"Senior iOS и React Native разработчик","url":"https://ivashenko.work/","image":"https://ivashenko.work/assets/images/artyom-portrait.jpg","email":"mailto:artyom@ivashenko.work","address":{"@type":"PostalAddress","addressLocality":"Ташкент","addressCountry":"UZ"},"sameAs":["https://t.me/iv_ashenko","https://www.linkedin.com/in/artyom-ivashenko","https://github.com/ivashhchenko"],"knowsAbout":["iOS","Swift","SwiftUI","React Native","Мобильная разработка","Публикация в App Store","Подписки"]}
 </script>
-<style>
-@font-face{font-family:Halvar;src:url('/assets/fonts/halvar-regular.woff2') format('woff2');font-weight:400;font-display:swap}
-@font-face{font-family:Halvar;src:url('/assets/fonts/halvar-medium.woff2') format('woff2');font-weight:500;font-display:swap}
-:root{
-  --bg:#ffffff;--bg-2:#f4f6fb;--ink:#0b1220;--muted:#5b6475;--line:#e3e7ef;
-  --accent:#1f4fe0;--accent-ink:#ffffff;--accent-soft:#e8eefc;
-  --radius:20px;--wide:min(100% - 40px,1120px);
-  --sans:Halvar,-apple-system,"Inter","Helvetica Neue",Arial,sans-serif;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.55 var(--sans);-webkit-font-smoothing:antialiased}
-a{color:inherit;text-decoration:none}
-img{max-width:100%;display:block}
-.wrap{width:var(--wide);margin:0 auto}
-h1,h2,h3{margin:0;font-weight:500;letter-spacing:-.02em;line-height:1.08}
-h1{font-size:clamp(44px,7vw,76px)}
-h2{font-size:clamp(30px,4.2vw,46px)}
-h3{font-size:22px;line-height:1.25}
-p{margin:0}
-.muted{color:var(--muted)}
-.eyebrow{font-size:14px;color:var(--muted);letter-spacing:.01em}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 22px;border-radius:999px;font-size:16px;font-weight:500;border:1px solid var(--line);transition:transform .15s,background .15s,border-color .15s;white-space:nowrap}
-.btn:hover{transform:translateY(-1px)}
-.btn--primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
-.btn--primary:hover{background:#173fba}
-.btn--ghost:hover{border-color:var(--ink)}
-.btn--small{padding:10px 16px;font-size:14px}
-section{padding:clamp(56px,8vw,112px) 0}
-.sec-head{max-width:720px;margin-bottom:clamp(28px,4vw,48px)}
-.sec-head p{margin-top:14px;font-size:18px;color:var(--muted)}
-
-/* header */
-.nav{position:sticky;top:0;z-index:50;display:flex;justify-content:center;padding:14px 16px;pointer-events:none}
-.nav-pill{pointer-events:auto;display:flex;align-items:center;gap:6px;padding:6px 6px 6px 18px;background:rgba(255,255,255,.86);backdrop-filter:saturate(180%) blur(14px);-webkit-backdrop-filter:saturate(180%) blur(14px);border:1px solid var(--line);border-radius:999px;box-shadow:0 8px 30px rgba(11,18,32,.08);font-size:14px}
-.nav-pill .brand{font-weight:500;margin-right:10px}
-.nav-pill a:not(.brand):not(.btn){padding:8px 10px;border-radius:999px;color:var(--muted)}
-.nav-pill a:not(.brand):not(.btn):hover{color:var(--ink);background:var(--bg-2)}
-
-/* hero */
-.hero{padding:clamp(32px,6vw,80px) 0 clamp(40px,6vw,72px)}
-.hero-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(280px,.85fr);gap:clamp(32px,6vw,80px);align-items:center}
-.hero h1{margin:14px 0 22px}
-.hero .lead{font-size:clamp(17px,1.6vw,20px);color:var(--muted);max-width:560px}
-.hero .lead b{color:var(--ink);font-weight:500}
-.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
-.portrait{aspect-ratio:9/10;border-radius:28px;overflow:hidden;background:var(--bg-2)}
-.portrait img{width:100%;height:100%;object-fit:cover}
-
-/* stats */
-.stats{padding:0 0 clamp(40px,6vw,72px)}
-.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.stat{padding:26px 24px;border:1px solid var(--line);border-radius:var(--radius);background:var(--bg-2)}
-.stat .num{font-size:clamp(34px,3.6vw,46px);font-weight:500;letter-spacing:-.03em;line-height:1}
-.stat .lbl{margin-top:10px;font-size:14px;color:var(--muted);line-height:1.4}
-.stat .src{margin-top:6px;font-size:13px}
-.stat .src a{color:var(--accent)}
-
-/* services */
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.card{display:flex;flex-direction:column;padding:28px 26px;border:1px solid var(--line);border-radius:var(--radius);background:#fff}
-.card .when{font-size:14px;color:var(--muted)}
-.card h3{margin:6px 0 12px}
-.card p{color:var(--muted);font-size:16px;flex:1}
-.card .price{margin-top:22px;font-size:22px;font-weight:500;letter-spacing:-.02em}
-.card .price small{font-size:14px;color:var(--muted);font-weight:400;margin-left:4px}
-.services-note{margin-top:22px;font-size:16px;color:var(--muted);max-width:720px}
-.services-note a{color:var(--accent)}
-
-/* cases */
-.case{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.9fr);gap:clamp(28px,5vw,72px);align-items:center;padding:clamp(32px,4vw,56px) 0;border-top:1px solid var(--line)}
-.case:first-of-type{border-top:0;padding-top:0}
-.case:nth-child(even) .case-media{order:-1}
-.case .eyebrow{display:flex;gap:10px;align-items:center}
-.case .eyebrow img{width:28px;height:28px;border-radius:8px}
-.case h3{font-size:clamp(24px,2.6vw,32px);margin:12px 0 14px;letter-spacing:-.02em}
-.case p{color:var(--muted)}
-.case ol{margin:18px 0 0;padding:0;list-style:none;display:grid;gap:10px}
-.case ol li{display:grid;grid-template-columns:28px 1fr;gap:10px;font-size:16px}
-.case ol li span{color:var(--accent);font-size:13px;padding-top:4px}
-.case .links{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
-.case-media{border-radius:var(--radius);background:var(--bg-2);padding:28px;display:flex;justify-content:center;align-items:center;min-height:340px;overflow:hidden}
-.case-media img{max-height:440px;width:auto;border-radius:22px;box-shadow:0 20px 50px rgba(11,18,32,.14)}
-.case-media .shots{display:flex;gap:14px}
-.case-media .shots img{max-height:360px}
-.case-media .shots img:nth-child(2){transform:translateY(28px)}
-.logo-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;width:100%}
-.logo-grid div{aspect-ratio:1;border-radius:12px;background:#fff;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--muted)}
-.logo-grid div.hl{background:var(--accent);color:#fff;border-color:var(--accent);font-weight:500}
-
-/* process */
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.step{padding:26px 24px;border-radius:var(--radius);background:var(--bg-2);border:1px solid var(--line)}
-.step .n{font-size:13px;color:var(--accent);font-weight:500}
-.step h3{margin:10px 0 8px;font-size:19px}
-.step p{font-size:15px;color:var(--muted)}
-.fit{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
-.fit div{padding:22px 24px;border-radius:var(--radius);border:1px solid var(--line);font-size:15px}
-.fit b{display:block;font-weight:500;margin-bottom:6px}
-.fit .no{color:var(--muted)}
-
-/* about */
-.about{background:var(--bg-2)}
-.about-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,.75fr);gap:clamp(28px,5vw,72px);align-items:start}
-.about .big{font-size:clamp(24px,3vw,36px);font-weight:500;letter-spacing:-.02em;line-height:1.2}
-.about-text{display:grid;gap:14px;margin-top:22px;color:var(--muted)}
-.about-text b{color:var(--ink);font-weight:500}
-.about-side{display:grid;gap:12px}
-.about-side .item{padding:18px 20px;border-radius:16px;background:#fff;border:1px solid var(--line);font-size:15px}
-.about-side .item b{display:block;font-weight:500;margin-bottom:4px}
-.about-side .item span{color:var(--muted)}
-.about-side img{border-radius:16px;aspect-ratio:1;object-fit:cover}
-
-/* faq */
-.faq{display:grid;gap:10px;max-width:820px}
-details{border:1px solid var(--line);border-radius:16px;padding:0 22px;background:#fff}
-summary{cursor:pointer;list-style:none;padding:18px 0;font-weight:500;font-size:17px;display:flex;justify-content:space-between;gap:16px;align-items:center}
-summary::-webkit-details-marker{display:none}
-summary::after{content:"+";color:var(--muted);font-size:22px;line-height:1;flex:none}
-details[open] summary::after{content:"–"}
-details p{padding:0 0 20px;color:var(--muted);font-size:16px}
-details p a{color:var(--accent)}
-
-/* contact */
-.contact{background:var(--ink);color:#fff;border-radius:28px;padding:clamp(36px,5vw,64px);display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,.8fr);gap:clamp(28px,5vw,64px);align-items:center}
-.contact h2{color:#fff}
-.contact p{color:rgba(255,255,255,.7);margin-top:14px;font-size:17px;max-width:520px}
-.contact .btn--primary{background:#fff;color:var(--ink);border-color:#fff}
-.contact .btn--primary:hover{background:#e8eefc}
-.contact .btn--ghost{color:#fff;border-color:rgba(255,255,255,.3)}
-.contact .btn--ghost:hover{border-color:#fff}
-.links{display:grid;gap:8px}
-.links a{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 18px;border-radius:14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);font-size:15px}
-.links a:hover{background:rgba(255,255,255,.12)}
-.links a span{color:rgba(255,255,255,.55);font-size:13px}
-
-footer{padding:36px 0 48px;font-size:14px;color:var(--muted);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
-footer a:hover{color:var(--ink)}
-footer nav{display:flex;gap:18px;flex-wrap:wrap}
-
-@media(max-width:900px){
-  .stat-grid{grid-template-columns:repeat(2,1fr)}
-  .cards,.steps{grid-template-columns:1fr 1fr}
-  .nav-pill a.hide-m{display:none}
-}
-@media(max-width:700px){
-  :root{--wide:min(100% - 32px,1120px)}
-  body{font-size:16px}
-  .hero-grid,.case,.about-grid,.contact,.fit{grid-template-columns:1fr}
-  .case:nth-child(even) .case-media{order:0}
-  .portrait{max-width:380px;aspect-ratio:1}
-  .hero-cta .btn{width:100%;justify-content:center}
-  .cards,.steps{grid-template-columns:1fr}
-  .case-media{min-height:0;padding:20px}
-  .case-media img{max-height:320px}
-  .nav-pill{font-size:13px;padding-left:14px;max-width:100%}
-  .nav-pill .brand{white-space:nowrap}
-  .nav-pill a:not(.brand):not(.btn){padding:8px 7px}
-  .nav-pill .hide-s{display:none}
-}
-@media(max-width:420px){.stat-grid{grid-template-columns:1fr}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
-</style>
 </head>
 <body>
 
 <div class="nav">
   <div class="nav-pill">
-    <a class="brand" href="/">Artyom<span class="hide-s"> Ivashenko</span></a>
-    <a class="hide-s" href="#services">Services</a>
-    <a href="#work">Work</a>
-    <a class="hide-m" href="#process">Process</a>
-    <a class="hide-m" href="#about">About</a>
-    <a class="btn btn--primary btn--small" href="https://t.me/iv_ashenko">Message me ↗</a>
+    <a class="brand" href="/">Артём<span class="hide-s"> Иващенко</span></a>
+    <a class="hide-s" href="#services">Услуги</a>
+    <a href="#work">Кейсы</a>
+    <a class="hide-m" href="#process">Процесс</a>
+    <a class="hide-m" href="#about">Обо мне</a>
+    <span class="lang"><a class="on" href="/">RU</a><a href="/en/">EN</a></span>
+    <a class="btn btn--primary btn--small" href="https://t.me/iv_ashenko">Написать ↗</a>
   </div>
 </div>
 
@@ -198,117 +40,117 @@ footer nav{display:flex;gap:18px;flex-wrap:wrap}
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <p class="eyebrow">Senior iOS &amp; React Native engineer · Mobile lead at LovOn · 14 apps shipped</p>
-      <h1>Artyom<br>Ivashenko</h1>
-      <p class="lead">I build mobile products <b>from zero to App Store in 3–4 weeks</b>: the app, the backend, subscriptions, analytics and release. Five years in mobile, a social product grown to 60K monthly users and a bank app that onboarded 20K customers in its first quarter. Available for contract work now.</p>
+      <p class="eyebrow">Senior iOS и React Native разработчик · лид мобильной команды в LovOn · 14 приложений в App Store</p>
+      <h1>Артём<br>Иващенко</h1>
+      <p class="lead">Делаю мобильные продукты <b>от идеи до App Store за 3–4 недели</b>: приложение, бэкенд, подписки, аналитика, релиз. Пять лет в мобильной разработке, соцприложение, выросшее до 60K пользователей в месяц, и мобильный банк, который за первый квартал набрал 20K клиентов. Беру проекты на контракт прямо сейчас.</p>
       <div class="hero-cta">
-        <a class="btn btn--primary" href="https://t.me/iv_ashenko">Book a 20-minute call ↗</a>
-        <a class="btn btn--ghost" href="#work">See the work</a>
+        <a class="btn btn--primary" href="https://t.me/iv_ashenko">Созвон на 20 минут ↗</a>
+        <a class="btn btn--ghost" href="#work">Посмотреть кейсы</a>
       </div>
     </div>
     <div class="portrait">
-      <img src="/assets/images/artyom-portrait.jpg" alt="Artyom Ivashenko" width="1980" height="2200" fetchpriority="high">
+      <img src="/assets/images/artyom-portrait.jpg" alt="Артём Иващенко" width="1980" height="2200" fetchpriority="high">
     </div>
   </div>
 </section>
 
 <section class="stats">
   <div class="wrap stat-grid">
-    <div class="stat"><div class="num">60K+</div><div class="lbl">monthly active users on LovOn, built from zero on iOS and Android</div><div class="src"><a href="/projects/lovon/">Case study →</a></div></div>
-    <div class="stat"><div class="num">20K</div><div class="lbl">customers onboarded in 3 months by the APEX mobile bank I built</div><div class="src"><a href="/projects/apex-bank/">Case study →</a></div></div>
-    <div class="stat"><div class="num">15</div><div class="lbl">apps shipped in 4 months at a studio, 4.7 average App Store rating</div><div class="src"><a href="/projects/aezakmi/">Case study →</a></div></div>
-    <div class="stat"><div class="num">200K+</div><div class="lbl">installs and 50K peak DAU on emovi, a consumer discovery app</div><div class="src"><a href="/projects/emovi/">Case study →</a></div></div>
+    <div class="stat"><div class="num">60K+</div><div class="lbl">активных пользователей в месяц у LovOn, построенного с нуля на iOS и Android</div><div class="src"><a href="/projects/lovon/">Кейс →</a></div></div>
+    <div class="stat"><div class="num">20K</div><div class="lbl">клиентов за 3 месяца у мобильного банка APEX, который я разработал</div><div class="src"><a href="/projects/apex-bank/">Кейс →</a></div></div>
+    <div class="stat"><div class="num">15</div><div class="lbl">приложений за 4 месяца в студии, средняя оценка в App Store 4.7</div><div class="src"><a href="/projects/aezakmi/">Кейс →</a></div></div>
+    <div class="stat"><div class="num">200K+</div><div class="lbl">установок и 50K DAU на пике у emovi, приложения для поиска фильмов</div><div class="src"><a href="/projects/emovi/">Кейс →</a></div></div>
   </div>
 </section>
 
 <section id="services">
   <div class="wrap">
     <div class="sec-head">
-      <h2>What I build for you</h2>
-      <p>Three ways to work together. Every option includes a written scope, a fixed price and a build you can install on your phone every week.</p>
+      <h2>Что я делаю</h2>
+      <p>Три формата работы. В каждом: письменное ТЗ, фиксированная цена и сборка, которую можно поставить на телефон, каждую неделю.</p>
     </div>
     <div class="cards">
       <div class="card">
-        <div class="when">1 week</div>
-        <h3>Prototype</h3>
-        <p>A clickable app on real screens, 3–5 flows, no backend. For investor pitches, user interviews and testing an idea before you commit.</p>
-        <div class="price">from $900</div>
+        <div class="when">1 неделя</div>
+        <h3>Прототип</h3>
+        <p>Кликабельное приложение на реальных экранах, 3–5 сценариев, без бэкенда. Для питча инвестору, интервью с пользователями и проверки идеи до больших вложений.</p>
+        <div class="price">от $900</div>
       </div>
       <div class="card">
-        <div class="when">3–4 weeks</div>
+        <div class="when">3–4 недели</div>
         <h3>MVP</h3>
-        <p>The full product: iOS or React Native app, backend (Cloudflare Workers, Firebase or Supabase), auth, subscriptions (StoreKit, Adapty, RevenueCat), analytics, App Store release.</p>
-        <div class="price">from $3,500</div>
+        <p>Полный продукт: приложение на iOS или React Native, бэкенд (Cloudflare Workers, Firebase или Supabase), авторизация, подписки (StoreKit, Adapty, RevenueCat), аналитика, публикация в App Store.</p>
+        <div class="price">от $3 500</div>
       </div>
       <div class="card">
-        <div class="when">monthly</div>
-        <h3>Ongoing</h3>
-        <p>A fixed block of hours each month: new features, releases, store updates, analytics, or a senior pair of hands for your team.</p>
-        <div class="price">from $1,200<small>/ month</small></div>
+        <div class="when">помесячно</div>
+        <h3>Сопровождение</h3>
+        <p>Фиксированный объём часов в месяц: новые функции, релизы, обновления в сторах, аналитика или senior-руки для вашей команды.</p>
+        <div class="price">от $1 200<small>/ месяц</small></div>
       </div>
     </div>
-    <p class="services-note">Hourly work and code audits: $40 / hour. Not sure which fits? <a href="https://t.me/iv_ashenko">Send what you have</a> and I’ll reply within a day with scope, timeline and price.</p>
+    <p class="services-note">Почасовая работа и аудит кода: $40 / час. Не знаете, какой формат подходит? <a href="https://t.me/iv_ashenko">Пришлите, что есть</a>, в течение дня отвечу с объёмом, сроком и ценой.</p>
   </div>
 </section>
 
 <section id="work">
   <div class="wrap">
     <div class="sec-head">
-      <h2>Work</h2>
-      <p>Four products, four different problems. Each one shipped and measured.</p>
+      <h2>Кейсы</h2>
+      <p>Четыре продукта, четыре разные задачи. Каждый выпущен и измерен.</p>
     </div>
 
     <article class="case">
       <div>
-        <p class="eyebrow"><img src="/assets/images/lovon-logo-square.png" alt="">LovOn · 2024 – now · Mobile lead</p>
-        <h3>An AI relationship app with real-time voice, grown from zero to 60K monthly users.</h3>
-        <p>LovOn had to make emotionally sensitive conversations, a probabilistic AI backend and live voice feel predictable. I built the mobile foundation, led a team of three mobile engineers and worked directly with backend, product, design and marketing.</p>
+        <p class="eyebrow"><img src="/assets/images/lovon-logo-square.png" alt="">LovOn · 2024 – сейчас · лид мобильной команды</p>
+        <h3>AI-приложение для отношений с голосом в реальном времени, выросшее с нуля до 60K пользователей в месяц.</h3>
+        <p>В LovOn эмоционально чувствительные разговоры, вероятностный AI-бэкенд и живой голос должны были ощущаться предсказуемо. Я построил мобильную основу, вёл команду из трёх мобильных разработчиков и работал напрямую с бэкендом, продуктом, дизайном и маркетингом.</p>
         <ol>
-          <li><span>01</span>Native iOS app on SwiftUI and UIKit, then the Android client.</li>
-          <li><span>02</span>Real-time voice with the AI assistant via LiveKit and RetellAI.</li>
-          <li><span>03</span>Multi-tier subscriptions: StoreKit, RevenueCat, later Adapty.</li>
-          <li><span>04</span>A React Native web funnel for paid traffic: first AI session and purchase on the web, then a seamless hand-off into the app by deep link.</li>
-          <li><span>05</span>Onboarding and rendering work that lifted engagement by 25%.</li>
+          <li><span>01</span>Нативное iOS-приложение на SwiftUI и UIKit, затем клиент под Android.</li>
+          <li><span>02</span>Голосовое общение с AI-ассистентом в реальном времени через LiveKit и RetellAI.</li>
+          <li><span>03</span>Подписки с несколькими уровнями: StoreKit, RevenueCat, затем Adapty.</li>
+          <li><span>04</span>Веб-воронка на React Native для рекламного трафика: первая AI-сессия и покупка в вебе, затем бесшовный переход в приложение по диплинку.</li>
+          <li><span>05</span>Онбординг и оптимизация рендеринга, которые подняли вовлечённость на 25%.</li>
         </ol>
         <div class="links">
-          <a class="btn btn--ghost btn--small" href="/projects/lovon/">Read the case study</a>
+          <a class="btn btn--ghost btn--small" href="/projects/lovon/">Читать кейс</a>
           <a class="btn btn--ghost btn--small" href="https://lovon.app/">lovon.app ↗</a>
         </div>
       </div>
-      <div class="case-media"><div class="shots"><img src="/assets/images/lovon-01.webp" alt="LovOn app screen" loading="lazy"><img src="/assets/images/lovon-02.webp" alt="LovOn app screen" loading="lazy"></div></div>
+      <div class="case-media"><div class="shots"><img src="/assets/images/lovon-01.webp" alt="Экран приложения LovOn" loading="lazy"><img src="/assets/images/lovon-02.webp" alt="Экран приложения LovOn" loading="lazy"></div></div>
     </article>
 
     <article class="case">
       <div>
-        <p class="eyebrow"><img src="/assets/images/apex-bank-logo.png" alt="">APEX BANK · 2023 – 2024 · iOS engineer</p>
-        <h3>A native mobile bank, built from prototypes to launch. 20K customers in the first three months.</h3>
-        <p>In banking every ambiguous state costs money. Loading, retries, duplicate actions, authorization and partial failure all had to behave visibly and consistently, and the codebase had to stay maintainable as the product surface grew.</p>
+        <p class="eyebrow"><img src="/assets/images/apex-bank-logo.png" alt="">APEX BANK · 2023 – 2024 · iOS-разработчик</p>
+        <h3>Нативный мобильный банк от прототипов до запуска. 20K клиентов за первые три месяца.</h3>
+        <p>В банке каждое неоднозначное состояние стоит денег. Загрузка, повторы, дублирующие действия, авторизация и частичные сбои должны были вести себя заметно и одинаково, а кодовая база оставаться поддерживаемой по мере роста продукта.</p>
         <ol>
-          <li><span>01</span>Banking and transaction flows in Swift, UIKit and SwiftUI.</li>
-          <li><span>02</span>Micro-modular architecture on VIPER, later migrated to MVP-C with SPM packages split by layer.</li>
-          <li><span>03</span>Networking layer and bank API integration, sensitive data in Keychain.</li>
-          <li><span>04</span>Large product team, mandatory code review and test coverage.</li>
+          <li><span>01</span>Банковские и транзакционные сценарии на Swift, UIKit и SwiftUI.</li>
+          <li><span>02</span>Микромодульная архитектура на VIPER, затем переход на MVP-C с SPM-пакетами по слоям.</li>
+          <li><span>03</span>Сетевой слой и интеграция с API банка, чувствительные данные в Keychain.</li>
+          <li><span>04</span>Большая продуктовая команда, обязательное код-ревью и покрытие тестами.</li>
         </ol>
         <div class="links">
-          <a class="btn btn--ghost btn--small" href="/projects/apex-bank/">Read the case study</a>
+          <a class="btn btn--ghost btn--small" href="/projects/apex-bank/">Читать кейс</a>
           <a class="btn btn--ghost btn--small" href="https://www.apexbank.uz/en/">apexbank.uz ↗</a>
         </div>
       </div>
-      <div class="case-media"><div class="shots"><img src="/assets/images/apex-01.webp" alt="APEX BANK app screen" loading="lazy"><img src="/assets/images/apex-02.webp" alt="APEX BANK app screen" loading="lazy"></div></div>
+      <div class="case-media"><div class="shots"><img src="/assets/images/apex-01.webp" alt="Экран приложения APEX BANK" loading="lazy"><img src="/assets/images/apex-02.webp" alt="Экран приложения APEX BANK" loading="lazy"></div></div>
     </article>
 
     <article class="case">
       <div>
-        <p class="eyebrow"><img src="/assets/images/aezakmi-logo.png" alt="">AEZAKMI · 2024 · iOS engineer</p>
-        <h3>15 native iOS apps in four months, in 2–4 week cycles, at a 4.7 average rating.</h3>
-        <p>A studio that ships utility apps fast. The job was a repeatable path from a short brief to the App Store without turning every codebase into a copy of the last one. This is where the 3–4 week MVP offer above comes from.</p>
+        <p class="eyebrow"><img src="/assets/images/aezakmi-logo.png" alt="">AEZAKMI · 2024 · iOS-разработчик</p>
+        <h3>15 нативных iOS-приложений за четыре месяца, циклами по 2–4 недели, средняя оценка 4.7.</h3>
+        <p>Студия, которая быстро выпускает утилитарные приложения. Задача: повторяемый путь от короткого брифа до App Store, чтобы каждая кодовая база не превращалась в копию предыдущей. Отсюда и выросло предложение «MVP за 3–4 недели» выше.</p>
         <ol>
-          <li><span>01</span>Reusable UI library (UIKit, SwiftUI) and a base architecture template.</li>
-          <li><span>02</span>CI/CD on Codemagic and fastlane: build, signing, release.</li>
-          <li><span>03</span>Firebase, Apphud subscriptions, analytics, Apple review, post-launch fixes.</li>
+          <li><span>01</span>Библиотека переиспользуемых UI-компонентов (UIKit, SwiftUI) и базовый архитектурный шаблон.</li>
+          <li><span>02</span>CI/CD на Codemagic и fastlane: сборка, подпись, публикация.</li>
+          <li><span>03</span>Firebase, подписки через Apphud, аналитика, модерация Apple, правки после запуска.</li>
         </ol>
         <div class="links">
-          <a class="btn btn--ghost btn--small" href="/projects/aezakmi/">Read the case study</a>
+          <a class="btn btn--ghost btn--small" href="/projects/aezakmi/">Читать кейс</a>
         </div>
       </div>
       <div class="case-media">
@@ -322,19 +164,19 @@ footer nav{display:flex;gap:18px;flex-wrap:wrap}
 
     <article class="case">
       <div>
-        <p class="eyebrow"><img src="/assets/images/emovi-logo-square.png" alt="">emovi · 2022 · iOS engineer</p>
-        <h3>Movie discovery by emoji. 200K+ installs and up to 50K daily users.</h3>
-        <p>A playful mechanic on top of remote data, recommendations and rich content. The client had to stay light while handling imperfect networks and consumer-scale load.</p>
+        <p class="eyebrow"><img src="/assets/images/emovi-logo-square.png" alt="">emovi · 2022 · iOS-разработчик</p>
+        <h3>Поиск фильмов по эмодзи. 200K+ установок и до 50K пользователей в день.</h3>
+        <p>Игровая механика поверх удалённых данных, рекомендаций и тяжёлого контента. Клиент должен был оставаться лёгким и при этом выдерживать плохую сеть и потребительскую нагрузку.</p>
         <ol>
-          <li><span>01</span>Client built from scratch on UIKit with MVVM.</li>
-          <li><span>02</span>Discovery and recommendation flows, loading, empty, retry and cached states.</li>
-          <li><span>03</span>Firebase, Amplitude, Adapty; performance work as the audience grew.</li>
+          <li><span>01</span>Клиент с нуля на UIKit с MVVM.</li>
+          <li><span>02</span>Поиск и рекомендации, состояния загрузки, пустые экраны, повтор и кэш.</li>
+          <li><span>03</span>Firebase, Amplitude, Adapty; оптимизация производительности по мере роста аудитории.</li>
         </ol>
         <div class="links">
-          <a class="btn btn--ghost btn--small" href="/projects/emovi/">Read the case study</a>
+          <a class="btn btn--ghost btn--small" href="/projects/emovi/">Читать кейс</a>
         </div>
       </div>
-      <div class="case-media"><div class="shots"><img src="/assets/images/emovi-01.jpg" alt="emovi app screen" loading="lazy"><img src="/assets/images/emovi-02.jpg" alt="emovi app screen" loading="lazy"></div></div>
+      <div class="case-media"><div class="shots"><img src="/assets/images/emovi-01.jpg" alt="Экран приложения emovi" loading="lazy"><img src="/assets/images/emovi-02.jpg" alt="Экран приложения emovi" loading="lazy"></div></div>
     </article>
   </div>
 </section>
@@ -342,18 +184,18 @@ footer nav{display:flex;gap:18px;flex-wrap:wrap}
 <section id="process">
   <div class="wrap">
     <div class="sec-head">
-      <h2>How I work</h2>
-      <p>No surprises on scope, money or progress.</p>
+      <h2>Как я работаю</h2>
+      <p>Без сюрпризов по объёму, деньгам и срокам.</p>
     </div>
     <div class="steps">
-      <div class="step"><div class="n">01</div><h3>Scope first</h3><p>A 20-minute call, then a written scope with milestones and a fixed price before any work starts.</p></div>
-      <div class="step"><div class="n">02</div><h3>50% upfront, 50% on release</h3><p>Work starts after the first payment. The rest is due when the product is live.</p></div>
-      <div class="step"><div class="n">03</div><h3>A build every week</h3><p>TestFlight builds and a short written update every week, from week one.</p></div>
-      <div class="step"><div class="n">04</div><h3>AI-native delivery</h3><p>I design the architecture, build with AI tooling, review every line and own the result. One senior engineer, the output of a small team.</p></div>
+      <div class="step"><div class="n">01</div><h3>Сначала объём</h3><p>Созвон на 20 минут, затем письменное ТЗ с этапами и фиксированной ценой до начала работы.</p></div>
+      <div class="step"><div class="n">02</div><h3>50% аванс, 50% по релизу</h3><p>Работа начинается после первого платежа. Остаток после выхода продукта.</p></div>
+      <div class="step"><div class="n">03</div><h3>Сборка каждую неделю</h3><p>Билды в TestFlight и короткий письменный отчёт каждую неделю, начиная с первой.</p></div>
+      <div class="step"><div class="n">04</div><h3>AI-native разработка</h3><p>Проектирую архитектуру, собираю с AI-инструментами, ревьюю каждую строку и отвечаю за результат. Один senior-разработчик, выработка небольшой команды.</p></div>
     </div>
     <div class="fit">
-      <div><b>Good fit</b>Founders who need an MVP. Teams that need a senior mobile engineer for a defined scope. Products where subscriptions and monetization have to be done right. Studios with overflow.</div>
-      <div class="no"><b>Not a fit</b>Free consulting, equity-only deals, unpaid test tasks.</div>
+      <div><b>Подходит</b>Фаундерам, которым нужен MVP. Командам, которым нужен senior мобильный разработчик на понятный объём. Продуктам, где подписки и монетизацию нужно сделать правильно. Студиям с переполнением.</div>
+      <div class="no"><b>Не подходит</b>Бесплатные консультации, работа за долю, неоплачиваемые тестовые.</div>
     </div>
   </div>
 </section>
@@ -361,33 +203,32 @@ footer nav{display:flex;gap:18px;flex-wrap:wrap}
 <section id="about" class="about">
   <div class="wrap about-grid">
     <div>
-      <p class="big">I’ve spent five years taking mobile products from an idea to the store, and I’m most useful when the whole thing is on one person’s plate.</p>
+      <p class="big">Пять лет вожу мобильные продукты от идеи до стора и полезнее всего, когда весь продукт лежит на одном человеке.</p>
       <div class="about-text">
-        <p>I started in 2022 on <b>emovi</b>, a consumer app that reached 200K installs. Then a year building a <b>mobile bank</b> inside a large team with strict review and testing. Then a studio, <b>Aezakmi</b>, where I shipped 15 apps in four months and learned how to make 2–4 week cycles repeatable.</p>
-        <p>Since 2024 I lead mobile at <b>LovOn</b>: an AI relationship product with real-time voice, grown to 60K monthly users. I build the iOS app, shipped the Android client and a React Native web funnel, and work directly with backend, product, design and marketing.</p>
-        <p>I work AI-native: Claude Code and Codex are part of my toolchain for everything from Swift to Cloudflare Workers. I design the system, delegate the typing, review every line and take responsibility for what ships. That’s how one engineer delivers a product in weeks.</p>
-        <p>Based in Tashkent (UTC+5), Russian and English, working with teams in Europe, CIS and the US. Contracts through a registered sole proprietorship.</p>
+        <p>Начал в 2022 году с <b>emovi</b>, потребительского приложения, которое дошло до 200K установок. Потом год строил <b>мобильный банк</b> в большой команде со строгим ревью и тестами. Потом студия <b>Aezakmi</b>, где выпустил 15 приложений за четыре месяца и научился делать циклы по 2–4 недели повторяемыми.</p>
+        <p>С 2024 года веду мобильную разработку в <b>LovOn</b>: AI-продукт для отношений с голосом в реальном времени, выросший до 60K пользователей в месяц. Делаю iOS-приложение, выпустил Android-клиент и веб-воронку на React Native, работаю напрямую с бэкендом, продуктом, дизайном и маркетингом.</p>
+        <p>Работаю AI-native: Claude Code и Codex часть моего инструментария для всего, от Swift до Cloudflare Workers. Проектирую систему, делегирую набор кода, ревьюю каждую строку и отвечаю за то, что выходит в релиз. Так один разработчик выпускает продукт за недели.</p>
+        <p>Живу в Ташкенте (UTC+5), русский и английский, работаю с командами из Европы, СНГ и США. Договор через ИП.</p>
       </div>
     </div>
     <div class="about-side">
-      <img src="/assets/images/artyom-working.jpg" alt="Artyom at work" loading="lazy" width="1367" height="1367">
-      <div class="item"><b>Stack</b><span>Swift, SwiftUI, UIKit, React Native, TypeScript, StoreKit, Adapty, RevenueCat, Apphud, Firebase, Supabase, Cloudflare Workers, fastlane</span></div>
-      <div class="item"><b>Side projects</b><span>Overhyped, an iOS fact-checker for viral AI videos (SwiftUI, Cloudflare Workers, Gemini). A content pipeline for an AI blog with 1,200+ followers.</span></div>
+      <div class="item"><b>Стек</b><span>Swift, SwiftUI, UIKit, React Native, TypeScript, StoreKit, Adapty, RevenueCat, Apphud, Firebase, Supabase, Cloudflare Workers, fastlane</span></div>
+      <div class="item"><b>Свои проекты</b><span>Overhyped, iOS-приложение для проверки обещаний из вирусных AI-роликов (SwiftUI, Cloudflare Workers, Gemini). Контент-пайплайн для блога об ИИ с 1 200+ подписчиками.</span></div>
     </div>
   </div>
 </section>
 
 <section id="faq">
   <div class="wrap">
-    <div class="sec-head"><h2>Questions</h2></div>
+    <div class="sec-head"><h2>Вопросы</h2></div>
     <div class="faq">
-      <details><summary>How much does an MVP cost and how long does it take?</summary><p>Most MVPs land between $3,500 and $6,000 and take 3–4 weeks: app, backend, auth, subscriptions, analytics and App Store release. The exact number comes after a 20-minute call and a written scope.</p></details>
-      <details><summary>Do you build the backend too?</summary><p>Yes. For most MVPs that means Cloudflare Workers, Firebase or Supabase. If you already have an API, I integrate with it.</p></details>
-      <details><summary>iOS only, or Android as well?</summary><p>Native iOS is my main stack. For both platforms at once I use React Native, which is how LovOn’s web funnel and several client products were built. I also shipped LovOn’s Android client.</p></details>
-      <details><summary>How does payment work?</summary><p>50% before work starts, 50% on release. Monthly retainers are paid at the start of each month. Invoices come from a registered sole proprietorship; bank transfer, Wise or crypto.</p></details>
-      <details><summary>What does “AI-native” mean in practice?</summary><p>I use Claude Code and Codex as part of the build. I design the architecture and the data model, split the work into tasks, review every line that comes back and test the result. You get senior-level output at a pace a single engineer couldn’t hit by hand.</p></details>
-      <details><summary>Can you join an existing team instead?</summary><p>Yes, on a monthly retainer or a fixed scope. I’ve worked in a large banking team with code review and tests, and led a mobile team of three at LovOn.</p></details>
-      <details><summary>Where are you and what hours do you work?</summary><p>Tashkent, UTC+5. I overlap with European mornings and afternoons fully, and with US East Coast mornings.</p></details>
+      <details><summary>Сколько стоит MVP и сколько это занимает?</summary><p>Большинство MVP укладываются в $3 500–6 000 и 3–4 недели: приложение, бэкенд, авторизация, подписки, аналитика и публикация в App Store. Точная цифра после созвона на 20 минут и письменного ТЗ.</p></details>
+      <details><summary>Бэкенд тоже делаете?</summary><p>Да. Для большинства MVP это Cloudflare Workers, Firebase или Supabase. Если у вас уже есть API, интегрируюсь с ним.</p></details>
+      <details><summary>Только iOS или Android тоже?</summary><p>Нативный iOS мой основной стек. Для двух платформ сразу использую React Native, так сделана веб-воронка LovOn и несколько клиентских продуктов. Android-клиент LovOn тоже выпускал я.</p></details>
+      <details><summary>Как проходит оплата?</summary><p>50% до начала работы, 50% по релизу. Помесячное сопровождение оплачивается в начале месяца. Счёт от ИП; перевод на карту или счёт, Wise, крипта.</p></details>
+      <details><summary>Что значит «AI-native» на практике?</summary><p>Использую Claude Code и Codex как часть процесса. Проектирую архитектуру и модель данных, разбиваю работу на задачи, ревьюю каждую строку и тестирую результат. Вы получаете senior-уровень с темпом, который один разработчик руками не выдаст.</p></details>
+      <details><summary>Можете присоединиться к существующей команде?</summary><p>Да, помесячно или на фиксированный объём. Работал в большой банковской команде с код-ревью и тестами и вёл мобильную команду из трёх человек в LovOn.</p></details>
+      <details><summary>Где вы и в какие часы работаете?</summary><p>Ташкент, UTC+5. Полностью пересекаюсь с Москвой, Алматы и Европой, с восточным побережьем США по утрам.</p></details>
     </div>
   </div>
 </section>
@@ -396,8 +237,8 @@ footer nav{display:flex;gap:18px;flex-wrap:wrap}
   <div class="wrap">
     <div class="contact">
       <div>
-        <h2>Let’s talk about your product.</h2>
-        <p>Send a short description of what you need, or just a link. I reply within a day with questions and a first estimate.</p>
+        <h2>Давайте обсудим ваш продукт.</h2>
+        <p>Пришлите короткое описание задачи или просто ссылку. В течение дня отвечу с вопросами и первой оценкой.</p>
         <div class="hero-cta">
           <a class="btn btn--primary" href="https://t.me/iv_ashenko">Telegram ↗</a>
           <a class="btn btn--ghost" href="mailto:artyom@ivashenko.work">artyom@ivashenko.work</a>
@@ -408,8 +249,8 @@ footer nav{display:flex;gap:18px;flex-wrap:wrap}
         <a href="mailto:artyom@ivashenko.work">Email <span>artyom@ivashenko.work</span></a>
         <a href="https://www.linkedin.com/in/artyom-ivashenko">LinkedIn <span>artyom-ivashenko</span></a>
         <a href="https://github.com/ivashhchenko">GitHub <span>ivashhchenko</span></a>
-        <a href="/assets/Artyom_Ivashenko_Senior_iOS_Optimized_EN.pdf">Resume <span>PDF</span></a>
-        <a href="/contact/">Contact form <span>ivashenko.work/contact</span></a>
+        <a href="/assets/Artyom_Ivashenko_Senior_iOS_Optimized_EN.pdf">Резюме <span>PDF, EN</span></a>
+        <a href="/contact/">Форма связи <span>ivashenko.work/contact</span></a>
       </div>
     </div>
   </div>
@@ -418,12 +259,12 @@ footer nav{display:flex;gap:18px;flex-wrap:wrap}
 </main>
 
 <footer class="wrap">
-  <div>© 2026 Artyom Ivashenko · Senior iOS &amp; React Native engineer · Tashkent</div>
+  <div>© 2026 Артём Иващенко · Senior iOS и React Native разработчик · Ташкент</div>
   <nav>
-    <a href="/projects/">Projects</a>
+    <a href="/en/">English</a>
+    <a href="/projects/">Проекты</a>
     <a href="/cv/">CV</a>
-    <a href="/notebook/">Notebook</a>
-    <a href="/contact/">Contact</a>
+    <a href="/contact/">Контакты</a>
   </nav>
 </footer>
 
