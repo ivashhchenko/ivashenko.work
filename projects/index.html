@@ -1,1 +1,105 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Projects · Artyom Ivashenko</title><meta name="description" content="Selected mobile product case studies by Artyom Ivashenko: LovOn, AEZAKMI, APEX BANK, and Emovi."><link rel="canonical" href="https://ivashenko.work/projects/"><link rel="stylesheet" href="/assets/projects-index.css?v=14"><link rel="icon" href="/assets/favicon.svg"><meta name="theme-color" content="#EEE9DF"></head><body><a class="skip" href="#main">Skip to content</a><header class="projects-header"><nav aria-label="Primary navigation"><a class="pill" href="/">about</a><a class="pill" href="/projects/" aria-current="page">projects</a><a class="pill" href="/contact/">contact</a></nav></header><main id="main"><section class="projects-hero"><h1 class="projects-statement"><span class="projects-particle" data-text="Projects">Projects</span></h1><p class="projects-intro projects-reactive">Four product contexts across relationship support, rapid App Store delivery, regulated banking and consumer discovery.</p></section><section class="project-index" id="selected-work" aria-labelledby="selected-work-title"><h2 class="section-title" id="selected-work-title">Selected work</h2><ul class="work-list"><li><a class="work-link" href="/projects/lovon/"><span>LovOn</span><span>Founding Mobile Engineer</span><span>2024—Now</span></a></li><li><a class="work-link" href="/projects/aezakmi/"><span>AEZAKMI Group</span><span>iOS Developer</span><span>2024</span></a></li><li><a class="work-link" href="/projects/apex-bank/"><span>APEX BANK</span><span>iOS Developer</span><span>2023—2024</span></a></li><li><a class="work-link" href="/projects/emovi/"><span>Emovi</span><span>iOS Developer</span><span>2022</span></a></li></ul></section></main><footer class="projects-footer">© Artyom Ivashenko 2026</footer><script id="projects-text-effects">(()=>{const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;const intro=document.querySelector('.projects-reactive');if(intro){intro.setAttribute('aria-label',intro.textContent.trim());const fragment=document.createDocumentFragment();intro.textContent.split(/(\s+)/).filter(Boolean).forEach(part=>{if(/^\s+$/.test(part)){fragment.appendChild(document.createTextNode(part))}else{const word=document.createElement('span');word.className='projects-word';[...part].forEach(letter=>{const char=document.createElement('span');char.className='projects-char';char.textContent=letter;word.appendChild(char)});fragment.appendChild(word)}});intro.replaceChildren(fragment);if(!reduced){const chars=[...intro.querySelectorAll('.projects-char')];let frame=0,bounds=[];const measure=()=>{bounds=chars.map(char=>{const r=char.getBoundingClientRect();return{x:r.left+r.width/2,y:r.top+r.height/2}})};intro.addEventListener('pointerenter',measure);intro.addEventListener('pointermove',event=>{if(event.pointerType!=='mouse')return;cancelAnimationFrame(frame);frame=requestAnimationFrame(()=>{const radius=Math.max(54,parseFloat(getComputedStyle(intro).fontSize)*3.2);chars.forEach((char,index)=>{const point=bounds[index];if(!point)return;let dx=point.x-event.clientX,dy=point.y-event.clientY,dist=Math.hypot(dx,dy);if(dist<radius){if(dist<1){const angle=index*2.399;dx=Math.cos(angle);dy=Math.sin(angle);dist=1}const force=Math.pow(1-dist/radius,1.8)*3.6;char.style.transform='translate('+(dx/dist*force).toFixed(2)+'px,'+(dy/dist*force).toFixed(2)+'px)'}else char.style.transform='translate(0,0)'})})});intro.addEventListener('pointerleave',()=>chars.forEach(char=>char.style.transform='translate(0,0)'));addEventListener('resize',measure,{passive:true})}}const word=document.querySelector('.projects-particle');if(word){const text=word.dataset.text||word.textContent;const canvas=document.createElement('canvas');canvas.className='projects-particle-canvas';canvas.setAttribute('aria-hidden','true');word.appendChild(canvas);const ctx=canvas.getContext('2d');let particles=[],pointer={x:0,y:0,active:false},raf=0,timer=0;const build=()=>{cancelAnimationFrame(raf);const rect=word.getBoundingClientRect(),dpr=Math.min(2,devicePixelRatio||1),padX=Math.max(24,rect.height*.65),padY=Math.max(16,rect.height*.45),width=Math.ceil(rect.width+padX*2),height=Math.ceil(rect.height+padY*2);canvas.width=Math.ceil(width*dpr);canvas.height=Math.ceil(height*dpr);canvas.style.width=width+'px';canvas.style.height=height+'px';canvas.style.left=-padX+'px';canvas.style.top=-padY+'px';ctx.setTransform(dpr,0,0,dpr,0,0);const mask=document.createElement('canvas');mask.width=canvas.width;mask.height=canvas.height;const mctx=mask.getContext('2d');mctx.setTransform(dpr,0,0,dpr,0,0);const style=getComputedStyle(word);mctx.font=style.font;mctx.textBaseline='alphabetic';const mt=mctx.measureText(text),ascent=mt.actualBoundingBoxAscent||parseFloat(style.fontSize)*.78,descent=mt.actualBoundingBoxDescent||parseFloat(style.fontSize)*.22,baseline=padY+(rect.height+ascent-descent)/2;mctx.fillText(text,padX,baseline);const image=mctx.getImageData(0,0,mask.width,mask.height).data,step=Math.max(5,Math.round(3.2*dpr));particles=[];for(let y=0;y<mask.height;y+=step)for(let x=0;x<mask.width;x+=step)if(image[(y*mask.width+x)*4+3]>120){const tx=x/dpr,ty=y/dpr,spread=reduced?0:18+Math.random()*42,angle=Math.random()*Math.PI*2;particles.push({x:tx+Math.cos(angle)*spread,y:ty+Math.sin(angle)*spread,vx:0,vy:0,tx,ty,r:.7+Math.random()*.75,phase:Math.random()*Math.PI*2})}word.classList.add('is-ready');let time=0;const draw=()=>{time+=.016;ctx.clearRect(0,0,width,height);ctx.fillStyle='#405536';for(const p of particles){if(!reduced){let dx=p.tx-p.x,dy=p.ty-p.y;p.vx+=dx*.065;p.vy+=dy*.065;if(pointer.active){const mx=p.x-pointer.x,my=p.y-pointer.y,dist=Math.hypot(mx,my)||1,radius=Math.max(36,rect.height*1.15);if(dist<radius){const force=(1-dist/radius)*1.85;p.vx+=mx/dist*force;p.vy+=my/dist*force}}p.vx*=.82;p.vy*=.82;p.x+=p.vx;p.y+=p.vy}ctx.beginPath();ctx.arc(p.x+(reduced?0:Math.sin(time*1.4+p.phase)*.22),p.y,p.r,0,Math.PI*2);ctx.fill()}if(!reduced)raf=requestAnimationFrame(draw)};draw()};word.addEventListener('pointermove',event=>{const r=canvas.getBoundingClientRect();pointer.x=event.clientX-r.left;pointer.y=event.clientY-r.top;pointer.active=event.pointerType==='mouse'});word.addEventListener('pointerleave',()=>pointer.active=false);addEventListener('resize',()=>{clearTimeout(timer);timer=setTimeout(build,120)},{passive:true});(document.fonts?.ready||Promise.resolve()).then(build)}})()</script></body></html>
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Кейсы · Артём Иващенко</title>
+<meta name="description" content="Четыре большых продукта и свои проекты: LovOn, APEX BANK, AEZAKMI, emovi, Overhyped, контент-ферма, tgAtlas, Kelpie.">
+<link rel="canonical" href="https://ivashenko.work/projects/">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/landing.css?v=2">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Кейсы · Артём Иващенко">
+<meta property="og:description" content="Четыре большых продукта и свои проекты: LovOn, APEX BANK, AEZAKMI, emovi, Overhyped, контент-ферма, tgAtlas, Kelpie.">
+<meta property="og:url" content="https://ivashenko.work/projects/">
+<meta property="og:image" content="https://ivashenko.work/assets/og-home.png">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+
+<div class="nav">
+  <div class="nav-pill">
+    <a class="brand" href="/">Артём<span class="hide-s"> Иващенко</span></a>
+    <a class="hide-s" href="/#services">Услуги</a>
+    <a href="/projects/">Кейсы</a>
+    <a class="hide-m" href="/cv/">CV</a>
+    <a class="hide-m" href="/contact/">Контакты</a>
+    <a class="hide-s" href="https://t.me/ivashenko_ai">Блог</a>
+    <span class="lang"><a class="on" href="/">RU</a><a href="/en/">EN</a></span>
+    <a class="btn btn--primary btn--small" href="https://t.me/iv_ashenko_work">Написать ↗</a>
+  </div>
+</div>
+
+<main>
+
+<section class="page-head">
+  <div class="wrap">
+    <p class="eyebrow">Кейсы</p>
+    <h1>Что я выпустил</h1>
+    <p class="lead">Четыре больших продукта в командах и свои проекты. Каждый выпущен и измерен: установки, активные пользователи, оценки в сторах.</p>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap">
+    <div class="sec-head"><h2>Продукты в командах</h2></div>
+    <div class="plist">
+      <a href="/projects/lovon/"><img src="/assets/images/lovon-logo-square.png" alt=""><div><b>LovOn</b><span>ИИ-терапевт с голосом в реальном времени · 2 млн установок, 100K+ MAU · лид мобильной команды · 2024 – сейчас</span></div><div class="arrow">→</div></a>
+      <a href="/projects/apex-bank/"><img src="/assets/images/apex-bank-logo.png" alt=""><div><b>APEX BANK</b><span>Нативный мобильный банк с нуля · 20K клиентов за три месяца · 2023 – 2024</span></div><div class="arrow">→</div></a>
+      <a href="/projects/aezakmi/"><img src="/assets/images/aezakmi-logo.png" alt=""><div><b>AEZAKMI</b><span>10 iOS-приложений за четыре месяца · средняя оценка 4.8 · 2024</span></div><div class="arrow">→</div></a>
+      <a href="/projects/emovi/"><img src="/assets/images/emovi-logo-square.png" alt=""><div><b>emovi</b><span>Поиск фильмов по эмодзи · 200K+ установок, 50K DAU · 2022</span></div><div class="arrow">→</div></a>
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="wrap">
+    <div class="sec-head"><h2>Свои проекты</h2><p>Полный цикл в одних руках: идея, бэкенд, клиент, ИИ, монетизация.</p></div>
+    <div class="cards">
+      <div class="card"><div class="when">iOS · SwiftUI, Cloudflare Workers, Gemini, Apphud</div><h3>Overhyped</h3><p>Приложение для проверки обещаний из вирусных AI-роликов: делишься видео, получаешь вердикт по каждому утверждению с источниками. Подписки, App Store.</p></div>
+      <div class="card"><div class="when">Node.js, Telegram Bot API, Google Drive API</div><h3>Контент-ферма</h3><p>Автопостинг Reels: видео из Google Drive попадают в очередь, согласуются в Telegram-боте и выходят в Instagram по расписанию.</p></div>
+      <div class="card"><div class="when">Go, Python, FastAPI, Vue, PostgreSQL</div><h3>tgAtlas</h3><p>Поиск потенциальных клиентов по публичным чатам Telegram: краулер, ИИ-классификация сообщений, кабинет заказчика.</p></div>
+      <div class="card"><div class="when">React Native, Node.js, PostgreSQL, Stripe</div><h3>Kelpie</h3><p>Финтех-сервис для Австралии: приложение и бэкенд, платежи через Stripe, загрузка и разбор банковских выписок, кабинет клиента.</p></div>
+      <div class="card"><div class="when">Claude, GPT, n8n</div><h3>AI-автоматизации</h3><p>Обработка заявок и документов, голосовые ассистенты, связки сервисов на n8n и своих воркерах для клиентов и своих проектов.</p></div>
+      <div class="card"><div class="when">Telegram · <a href="https://t.me/ivashenko_ai" style="color:var(--accent)">@ivashenko_ai</a></div><h3>Блог про ИИ</h3><p>Проверяю обещания ИИ-инструментов на себе. Telegram, YouTube, Instagram, 1 200+ подписчиков.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="contact">
+      <div>
+        <h2>Давайте обсудим ваш продукт.</h2>
+        <p>Пришлите короткое описание задачи или просто ссылку. В течение дня отвечу с вопросами и первой оценкой.</p>
+        <div class="hero-cta">
+          <a class="btn btn--primary" href="https://t.me/iv_ashenko_work">Telegram ↗</a>
+          <a class="btn btn--ghost" href="mailto:artyom@ivashenko.work">artyom@ivashenko.work</a>
+        </div>
+      </div>
+      <div class="links">
+        <a href="https://t.me/iv_ashenko_work">Telegram <span>@iv_ashenko_work</span></a>
+        <a href="mailto:artyom@ivashenko.work">Email <span>artyom@ivashenko.work</span></a>
+        <a href="https://www.linkedin.com/in/artyom-ivashenko">LinkedIn <span>artyom-ivashenko</span></a>
+        <a href="https://github.com/ivashhchenko">GitHub <span>ivashhchenko</span></a>
+        <a href="https://t.me/ivashenko_ai">Блог про ИИ <span>@ivashenko_ai</span></a>
+        <a href="/assets/Artyom_Ivashenko_Senior_iOS_Optimized_EN.pdf">Резюме <span>PDF, EN</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="wrap">
+  <div>© 2026 Артём Иващенко · Разработчик полного цикла · Ташкент</div>
+  <nav>
+    <a href="/en/">English</a>
+    <a href="/projects/">Проекты</a>
+    <a href="/cv/">CV</a>
+    <a href="/contact/">Контакты</a>
+  </nav>
+</footer>
+
+</body>
+</html>

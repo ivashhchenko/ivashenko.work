@@ -1,1 +1,123 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Emovi case study · Artyom Ivashenko</title><meta name="description" content="Emovi consumer iOS product case study by Artyom Ivashenko."><link rel="canonical" href="https://ivashenko.work/projects/emovi/"><link rel="stylesheet" href="/assets/case-study.css?v=20"><link rel="icon" href="/assets/favicon.svg"><meta name="theme-color" content="#EAE4E9"></head><body class="case-page case-emovi"><a class="skip" href="#main">Skip to content</a><header class="case-site-header"><a class="case-wordmark" href="/">Artyom Ivashenko</a><nav aria-label="Primary"><a href="/projects/">Projects</a><a href="/">About</a><a href="/contact/">Contact</a></nav></header><main id="main"><article class="cs"><header class="cs-head container"><div class="cs-head-links"><a class="cs-back" href="/projects/">← Projects</a><span class="cs-website">Discontinued product</span></div><h1 class="cs-title"><span class="sr-only">Emovi</span><span aria-hidden="true"><span class="cs-title-line"><span class="cs-title-inner">Emovi</span></span></span></h1><p class="cs-summary">I built and launched the client-server iOS app for emotion-based movie discovery. It reached 200K+ installs and up to 50K DAU before discontinuation.</p><dl class="cs-facts"><div><dt>Status</dt><dd>Discontinued · released 2022</dd></div><div><dt>Role</dt><dd>iOS Developer, part-time</dd></div><div><dt>Scope</dt><dd>0-to-1 client, discovery, APIs, Firebase, performance</dd></div><div><dt>Outcome</dt><dd>200K+ installs · up to 50K DAU</dd></div></dl></header><div class="cs-visual cs-visual-bleed cs-reveal"><div class="cs-phone-stage"><img src="/assets/images/emovi-01.jpg" alt="Emovi product screen: 10 seconds to a great movie" loading="lazy"><img src="/assets/images/emovi-02.jpg" alt="Emovi product screen: Combine emoji to find something new" loading="lazy"><img src="/assets/images/emovi-03.jpg" alt="Emovi product screen: Best matches in your feed" loading="lazy"><img src="/assets/images/emovi-04.jpg" alt="Emovi product screen: Emotion-based recommendation feed" loading="lazy"><img src="/assets/images/emovi-05.jpg" alt="Emovi product screen: Funny and light movie recommendations" loading="lazy"><img src="/assets/images/emovi-06.jpg" alt="Emovi product screen: Mature mood recommendations" loading="lazy"><img src="/assets/images/emovi-07.jpg" alt="Emovi product screen: Romantic and touching movie recommendations" loading="lazy"><img src="/assets/images/emovi-08.jpg" alt="Emovi product screen: Movie emotion profile before watching" loading="lazy"></div><p class="cs-visual-caption">Product screens from the released 2022 application.</p></div><section class="cs-block container"><h2 class="label cs-reveal">Context</h2><div class="cs-prose"><p class="cs-reveal">The interface had to make discovery fast and intuitive while coordinating remote data, recommendations, user state, and rich content.</p><p class="cs-reveal">The challenge was keeping the mechanic light without making the implementation brittle.</p></div></section><section class="cs-block container"><h2 class="label cs-reveal">Responsibilities</h2><div class="cs-prose cs-reveal"><ul class="cs-list"><li>Built and launched the client-server iOS app from scratch.</li><li>Implemented discovery, recommendation, and supporting flows.</li><li>Organized state with MVVM and integrated REST APIs and Firebase.</li><li>Worked on performance and stability at consumer scale.</li><li>Connected the playful interaction model to dependable data and state.</li></ul></div></section><section class="cs-quote container cs-reveal"><blockquote>200K+ installs.</blockquote></section><section class="cs-visual cs-visual-bleed cs-reveal"><div class="cs-metric-stage"><span class="cs-metric-value">200K+</span><span class="cs-metric-note">Installs · movie discovery · recommendation flows · consumer scale</span></div></section><section class="cs-block container"><h2 class="label cs-reveal">Engineering decisions</h2><div class="cs-decisions"><article class="cs-decision cs-reveal"><h3>One clear mechanic</h3><p>Emoji and mood were the distinctive entry point into movie and TV discovery.</p></article><article class="cs-decision cs-reveal"><h3>Separate state from presentation</h3><p>MVVM kept content, selections, and view behavior understandable.</p></article><article class="cs-decision cs-reveal"><h3>Design for imperfect networks</h3><p>Provide useful loading, empty, retry, and cached states.</p></article><article class="cs-decision cs-reveal"><h3>Measure real behavior</h3><p>Firebase and production signals informed stability and usage decisions.</p></article></div></section><section class="cs-results container"><h2 class="label cs-reveal">Outcomes</h2><ul class="cs-outcomes"><li class="cs-outcome cs-reveal"><span class="cs-outcome-value">200K+</span><span class="cs-outcome-label">installs</span></li><li class="cs-outcome cs-reveal"><span class="cs-outcome-value">50K</span><span class="cs-outcome-label">peak daily active users</span></li><li class="cs-outcome cs-reveal"><span class="cs-outcome-value">2022</span><span class="cs-outcome-label">released product</span></li><li class="cs-outcome cs-reveal"><span class="cs-outcome-value">1</span><span class="cs-outcome-label">clear discovery mechanic</span></li></ul><div class="cs-closing"><p class="cs-reveal">At this scale, the app faced production demands in performance, data handling, and reliability.</p><p class="cs-evidence cs-reveal">Metrics and screens are from the released 2022 product.</p></div></section><nav class="cs-next container" aria-label="Next project"><a class="cs-next-link" href="/projects/"><span class="label">Next</span><span class="cs-next-title">All work</span></a></nav></article></main><script>(()=>{if(!matchMedia("(prefers-reduced-motion: reduce)").matches){document.body.classList.add("motion-ready");const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("is-visible");observer.unobserve(entry.target)}}),{threshold:.08,rootMargin:"0px 0px -8%"});document.querySelectorAll(".cs-reveal").forEach(el=>observer.observe(el))}})()</script></body></html>
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>emovi · кейс · Артём Иващенко</title>
+<meta name="description" content="Поиск фильмов по эмодзи. 200K+ установок и до 50K пользователей в день.">
+<link rel="canonical" href="https://ivashenko.work/projects/emovi/">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/landing.css?v=2">
+<meta property="og:type" content="website">
+<meta property="og:title" content="emovi · кейс · Артём Иващенко">
+<meta property="og:description" content="Поиск фильмов по эмодзи. 200K+ установок и до 50K пользователей в день.">
+<meta property="og:url" content="https://ivashenko.work/projects/emovi/">
+<meta property="og:image" content="https://ivashenko.work/assets/images/emovi-01.jpg">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+
+<div class="nav">
+  <div class="nav-pill">
+    <a class="brand" href="/">Артём<span class="hide-s"> Иващенко</span></a>
+    <a class="hide-s" href="/#services">Услуги</a>
+    <a href="/projects/">Кейсы</a>
+    <a class="hide-m" href="/cv/">CV</a>
+    <a class="hide-m" href="/contact/">Контакты</a>
+    <a class="hide-s" href="https://t.me/ivashenko_ai">Блог</a>
+    <span class="lang"><a class="on" href="/">RU</a><a href="/en/">EN</a></span>
+    <a class="btn btn--primary btn--small" href="https://t.me/iv_ashenko_work">Написать ↗</a>
+  </div>
+</div>
+
+<main>
+
+<section class="page-head">
+  <div class="wrap">
+    <p class="eyebrow" style="display:flex;gap:10px;align-items:center"><img src="/assets/images/emovi-logo-square.png" alt="" style="width:28px;height:28px;border-radius:8px">emovi · 2022 · iOS-разработчик</p>
+    <h1>Поиск фильмов по эмодзи. 200K+ установок и до 50K пользователей в день</h1>
+    <p class="lead">Клиент-серверное iOS-приложение с нуля: игровая механика поверх удалённых данных, рекомендаций и тяжёлого контента. Продукт закрыт, цифры и экраны из релиза 2022 года.</p>
+    <div class="hero-cta"><a class="btn btn--ghost btn--small" href="/projects/">← Все кейсы</a></div>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap">
+    <div class="facts"><div class="fact"><b>Роль</b>iOS-разработчик, частичная занятость</div><div class="fact"><b>Объём</b>Клиент с нуля, поиск, рекомендации, API, Firebase, производительность</div><div class="fact"><b>Стек</b>Swift, UIKit, MVVM, REST, Firebase, Amplitude, Adapty</div><div class="fact"><b>Период</b>2022</div></div>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap">
+    <div class="shots-row"><img src="/assets/images/emovi-01.jpg" alt="Экран приложения emovi" loading="lazy"><img src="/assets/images/emovi-02.jpg" alt="Экран приложения emovi" loading="lazy"><img src="/assets/images/emovi-03.jpg" alt="Экран приложения emovi" loading="lazy"></div>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap two">
+    <div>
+      <div class="sec-head"><h2>Контекст</h2></div>
+      <div class="prose"><p>Интерфейс должен делать поиск быстрым и интуитивным, при этом координируя удалённые данные, рекомендации, состояние пользователя и много медиа.</p><p>Задача была удержать механику лёгкой, не сделав реализацию хрупкой.</p></div>
+    </div>
+    <div>
+      <div class="sec-head"><h2>Что сделал</h2></div>
+      <ol class="list"><li><span>01</span>Клиент с нуля на UIKit с MVVM.</li><li><span>02</span>Поиск и рекомендации, состояния загрузки, пустые экраны, повтор и кэш.</li><li><span>03</span>Firebase, Amplitude, Adapty, интеграция с REST API.</li><li><span>04</span>Оптимизация производительности и стабильности по мере роста аудитории.</li></ol>
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="wrap">
+    <div class="sec-head"><h2>Инженерные решения</h2></div>
+    <div class="steps"><div class="step"><div class="n">01</div><h3>Одна понятная механика</h3><p>Эмодзи и настроение как единственный вход в поиск фильмов и сериалов.</p></div><div class="step"><div class="n">02</div><h3>Состояние отдельно от представления</h3><p>MVVM держит контент, выбор и поведение экранов читаемыми.</p></div><div class="step"><div class="n">03</div><h3>Расчёт на плохую сеть</h3><p>Полезные состояния загрузки, пустоты, повтора и кэша.</p></div><div class="step"><div class="n">04</div><h3>Мерить реальное поведение</h3><p>Firebase и сигналы из прода определяли решения по стабильности и использованию.</p></div></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head"><h2>Результат</h2></div>
+    <div class="stat-grid"><div class="stat"><div class="num">200K+</div><div class="lbl">установок</div></div><div class="stat"><div class="num">50K</div><div class="lbl">пользователей в день на пике</div></div><div class="stat"><div class="num">2022</div><div class="lbl">год релиза</div></div><div class="stat"><div class="num">1</div><div class="lbl">клиент с нуля</div></div></div>
+    <div class="next" style="margin-top:40px">
+      <a href="/projects/">← Все кейсы</a>
+      <a href="/#work">На главную →</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="contact">
+      <div>
+        <h2>Давайте обсудим ваш продукт.</h2>
+        <p>Пришлите короткое описание задачи или просто ссылку. В течение дня отвечу с вопросами и первой оценкой.</p>
+        <div class="hero-cta">
+          <a class="btn btn--primary" href="https://t.me/iv_ashenko_work">Telegram ↗</a>
+          <a class="btn btn--ghost" href="mailto:artyom@ivashenko.work">artyom@ivashenko.work</a>
+        </div>
+      </div>
+      <div class="links">
+        <a href="https://t.me/iv_ashenko_work">Telegram <span>@iv_ashenko_work</span></a>
+        <a href="mailto:artyom@ivashenko.work">Email <span>artyom@ivashenko.work</span></a>
+        <a href="https://www.linkedin.com/in/artyom-ivashenko">LinkedIn <span>artyom-ivashenko</span></a>
+        <a href="https://github.com/ivashhchenko">GitHub <span>ivashhchenko</span></a>
+        <a href="https://t.me/ivashenko_ai">Блог про ИИ <span>@ivashenko_ai</span></a>
+        <a href="/assets/Artyom_Ivashenko_Senior_iOS_Optimized_EN.pdf">Резюме <span>PDF, EN</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="wrap">
+  <div>© 2026 Артём Иващенко · Разработчик полного цикла · Ташкент</div>
+  <nav>
+    <a href="/en/">English</a>
+    <a href="/projects/">Проекты</a>
+    <a href="/cv/">CV</a>
+    <a href="/contact/">Контакты</a>
+  </nav>
+</footer>
+
+</body>
+</html>

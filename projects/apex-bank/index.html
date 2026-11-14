@@ -1,1 +1,123 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>APEX BANK case study · Artyom Ivashenko</title><meta name="description" content="APEX BANK native iOS case study by Artyom Ivashenko."><link rel="canonical" href="https://ivashenko.work/projects/apex-bank/"><link rel="stylesheet" href="/assets/case-study.css?v=20"><link rel="icon" href="/assets/favicon.svg"><meta name="theme-color" content="#F3E7E4"></head><body class="case-page case-apex"><a class="skip" href="#main">Skip to content</a><header class="case-site-header"><a class="case-wordmark" href="/">Artyom Ivashenko</a><nav aria-label="Primary"><a href="/projects/">Projects</a><a href="/">About</a><a href="/contact/">Contact</a></nav></header><main id="main"><article class="cs"><header class="cs-head container"><div class="cs-head-links"><a class="cs-back" href="/projects/">← Projects</a><a class="cs-website" href="https://www.apexbank.uz/en/" target="_blank" rel="noopener noreferrer">Product website ↗</a></div><h1 class="cs-title"><span class="sr-only">APEX BANK</span><span aria-hidden="true"><span class="cs-title-line"><span class="cs-title-inner">APEX</span></span><span class="cs-title-line"><span class="cs-title-inner">BANK</span></span></span></h1><p class="cs-summary">I built and launched the bank’s iOS app from early prototypes to production banking workflows, onboarding 20K+ clients in three months.</p><dl class="cs-facts"><div><dt>Role</dt><dd>iOS Developer</dd></div><div><dt>Scope</dt><dd>Early product, banking flows, modular architecture</dd></div><div><dt>Stack</dt><dd>Swift, UIKit, VIPER, MVP, REST APIs, GCD</dd></div><div><dt>Year</dt><dd>2023–2024</dd></div></dl></header><div class="cs-visual cs-visual-bleed cs-reveal"><div class="cs-phone-stage"><img src="/assets/images/apex-01.webp" alt="Current public APEX BANK App Store screenshot" loading="lazy"><img src="/assets/images/apex-02.webp" alt="Current public APEX BANK transfer interface screenshot" loading="lazy"><img src="/assets/images/apex-03.webp" alt="Current public APEX BANK card interface screenshot" loading="lazy"></div><p class="cs-visual-caption">Current public APEX BANK product screens, shown as product context.</p></div><section class="cs-block container"><h2 class="label cs-reveal">Context</h2><div class="cs-prose"><p class="cs-reveal">Financial flows make ambiguity costly. Loading, retrying, duplicate actions, authorization, and partial failure needed visible and consistent behavior.</p><p class="cs-reveal">The application also had to remain maintainable as its product surface and backend contracts grew.</p></div></section><section class="cs-block container"><h2 class="label cs-reveal">Responsibilities</h2><div class="cs-prose cs-reveal"><ul class="cs-list"><li>Built the iOS banking app from prototypes through launch.</li><li>Implemented banking and transaction flows.</li><li>Developed a micro-modular architecture using VIPER and MVP patterns.</li><li>Integrated APIs and treated loading, error, and recovery as first-class states.</li><li>Supported release preparation and the transition to production.</li></ul></div></section><section class="cs-quote container cs-reveal"><blockquote>20K+ clients in three months.</blockquote></section><section class="cs-visual cs-visual-bleed cs-reveal"><div class="cs-metric-stage"><span class="cs-metric-value">20K+</span><span class="cs-metric-note">Clients onboarded · native banking flows · modular iOS architecture</span></div></section><section class="cs-block container"><h2 class="label cs-reveal">Engineering decisions</h2><div class="cs-decisions"><article class="cs-decision cs-reveal"><h3>Separate domains, not screens</h3><p>Modules followed banking responsibilities so each flow could evolve without coupling unrelated areas.</p></article><article class="cs-decision cs-reveal"><h3>Failure is part of the flow</h3><p>Network, authorization, and processing states were designed as expected paths.</p></article><article class="cs-decision cs-reveal"><h3>Clarity over novelty</h3><p>Familiar interactions and explicit confirmation suit financial actions.</p></article><article class="cs-decision cs-reveal"><h3>Release with operational context</h3><p>Production support required understanding API behavior and user state.</p></article></div></section><section class="cs-results container"><h2 class="label cs-reveal">Outcomes</h2><ul class="cs-outcomes"><li class="cs-outcome cs-reveal"><span class="cs-outcome-value">20K+</span><span class="cs-outcome-label">clients onboarded</span></li><li class="cs-outcome cs-reveal"><span class="cs-outcome-value">3</span><span class="cs-outcome-label">months after launch</span></li><li class="cs-outcome cs-reveal"><span class="cs-outcome-value">1</span><span class="cs-outcome-label">native banking application</span></li><li class="cs-outcome cs-reveal"><span class="cs-outcome-value">2023–24</span><span class="cs-outcome-label">documented work period</span></li></ul><div class="cs-closing"><p class="cs-reveal">The launch combined rapid delivery with dependable transaction states, an architecture designed to grow, and production support for a banking product.</p><p class="cs-evidence cs-reveal">Metrics describe the documented 2023–2024 work period. Current screens come from the public App Store listing.</p></div></section><nav class="cs-next container" aria-label="Next project"><a class="cs-next-link" href="/projects/emovi/"><span class="label">Next</span><span class="cs-next-title">Emovi</span></a></nav></article></main><script>(()=>{if(!matchMedia("(prefers-reduced-motion: reduce)").matches){document.body.classList.add("motion-ready");const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("is-visible");observer.unobserve(entry.target)}}),{threshold:.08,rootMargin:"0px 0px -8%"});document.querySelectorAll(".cs-reveal").forEach(el=>observer.observe(el))}})()</script></body></html>
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>APEX BANK · кейс · Артём Иващенко</title>
+<meta name="description" content="Нативный мобильный банк от прототипов до запуска. 20K клиентов за первые три месяца.">
+<link rel="canonical" href="https://ivashenko.work/projects/apex-bank/">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/landing.css?v=2">
+<meta property="og:type" content="website">
+<meta property="og:title" content="APEX BANK · кейс · Артём Иващенко">
+<meta property="og:description" content="Нативный мобильный банк от прототипов до запуска. 20K клиентов за первые три месяца.">
+<meta property="og:url" content="https://ivashenko.work/projects/apex-bank/">
+<meta property="og:image" content="https://ivashenko.work/assets/images/apex-01.webp">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+
+<div class="nav">
+  <div class="nav-pill">
+    <a class="brand" href="/">Артём<span class="hide-s"> Иващенко</span></a>
+    <a class="hide-s" href="/#services">Услуги</a>
+    <a href="/projects/">Кейсы</a>
+    <a class="hide-m" href="/cv/">CV</a>
+    <a class="hide-m" href="/contact/">Контакты</a>
+    <a class="hide-s" href="https://t.me/ivashenko_ai">Блог</a>
+    <span class="lang"><a class="on" href="/">RU</a><a href="/en/">EN</a></span>
+    <a class="btn btn--primary btn--small" href="https://t.me/iv_ashenko_work">Написать ↗</a>
+  </div>
+</div>
+
+<main>
+
+<section class="page-head">
+  <div class="wrap">
+    <p class="eyebrow" style="display:flex;gap:10px;align-items:center"><img src="/assets/images/apex-bank-logo.png" alt="" style="width:28px;height:28px;border-radius:8px">APEX BANK · 2023 – 2024 · iOS-разработчик</p>
+    <h1>Нативный мобильный банк от прототипов до запуска. 20K клиентов за первые три месяца</h1>
+    <p class="lead">Собрал iOS-приложение банка от ранних прототипов до рабочих банковских сценариев в большой команде со строгим ревью и тестами.</p>
+    <div class="hero-cta"><a class="btn btn--ghost btn--small" href="/projects/">← Все кейсы</a> <a class="btn btn--ghost btn--small" href="https://www.apexbank.uz/en/">apexbank.uz ↗</a></div>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap">
+    <div class="facts"><div class="fact"><b>Роль</b>iOS-разработчик</div><div class="fact"><b>Объём</b>Ранний продукт, банковские сценарии, модульная архитектура</div><div class="fact"><b>Стек</b>Swift, UIKit, SwiftUI, VIPER, MVP-C, SPM, REST, Keychain</div><div class="fact"><b>Период</b>2023 – 2024</div></div>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap">
+    <div class="shots-row"><img src="/assets/images/apex-01.webp" alt="Экран приложения APEX BANK" loading="lazy"><img src="/assets/images/apex-02.webp" alt="Экран приложения APEX BANK" loading="lazy"><img src="/assets/images/apex-03.webp" alt="Экран приложения APEX BANK" loading="lazy"></div>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap two">
+    <div>
+      <div class="sec-head"><h2>Контекст</h2></div>
+      <div class="prose"><p>В банке каждое неоднозначное состояние стоит денег. Загрузка, повторы, дублирующие действия, авторизация и частичные сбои должны вести себя заметно и одинаково.</p><p>Приложение должно оставаться поддерживаемым по мере роста продукта и контрактов с бэкендом.</p></div>
+    </div>
+    <div>
+      <div class="sec-head"><h2>Что сделал</h2></div>
+      <ol class="list"><li><span>01</span>Банковские и транзакционные сценарии на Swift, UIKit и SwiftUI.</li><li><span>02</span>Микромодульная архитектура на VIPER, затем переход на MVP-C с SPM-пакетами по слоям.</li><li><span>03</span>Сетевой слой и интеграция с API банка, чувствительные данные в Keychain.</li><li><span>04</span>Загрузка, ошибка и восстановление как полноценные состояния каждого сценария.</li><li><span>05</span>Большая продуктовая команда, обязательное код-ревью и покрытие тестами, подготовка релизов.</li></ol>
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="wrap">
+    <div class="sec-head"><h2>Инженерные решения</h2></div>
+    <div class="steps"><div class="step"><div class="n">01</div><h3>Делить по доменам, не по экранам</h3><p>Модули следуют банковским зонам ответственности, чтобы сценарии развивались независимо.</p></div><div class="step"><div class="n">02</div><h3>Сбой, это часть сценария</h3><p>Сеть, авторизация и обработка спроектированы как ожидаемые пути, а не исключения.</p></div><div class="step"><div class="n">03</div><h3>Ясность важнее новизны</h3><p>Привычные взаимодействия и явные подтверждения для финансовых действий.</p></div><div class="step"><div class="n">04</div><h3>Релиз с операционным контекстом</h3><p>Поддержка в проде требует понимать поведение API и состояние пользователя.</p></div></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head"><h2>Результат</h2></div>
+    <div class="stat-grid"><div class="stat"><div class="num">20K+</div><div class="lbl">клиентов за первые три месяца</div></div><div class="stat"><div class="num">1</div><div class="lbl">нативное банковское приложение</div></div><div class="stat"><div class="num">VIPER → MVP-C</div><div class="lbl">эволюция архитектуры без остановки разработки</div></div><div class="stat"><div class="num">2023–24</div><div class="lbl">период работы</div></div></div>
+    <div class="next" style="margin-top:40px">
+      <a href="/projects/">← Все кейсы</a>
+      <a href="/projects/emovi/">Следующий: emovi →</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="contact">
+      <div>
+        <h2>Давайте обсудим ваш продукт.</h2>
+        <p>Пришлите короткое описание задачи или просто ссылку. В течение дня отвечу с вопросами и первой оценкой.</p>
+        <div class="hero-cta">
+          <a class="btn btn--primary" href="https://t.me/iv_ashenko_work">Telegram ↗</a>
+          <a class="btn btn--ghost" href="mailto:artyom@ivashenko.work">artyom@ivashenko.work</a>
+        </div>
+      </div>
+      <div class="links">
+        <a href="https://t.me/iv_ashenko_work">Telegram <span>@iv_ashenko_work</span></a>
+        <a href="mailto:artyom@ivashenko.work">Email <span>artyom@ivashenko.work</span></a>
+        <a href="https://www.linkedin.com/in/artyom-ivashenko">LinkedIn <span>artyom-ivashenko</span></a>
+        <a href="https://github.com/ivashhchenko">GitHub <span>ivashhchenko</span></a>
+        <a href="https://t.me/ivashenko_ai">Блог про ИИ <span>@ivashenko_ai</span></a>
+        <a href="/assets/Artyom_Ivashenko_Senior_iOS_Optimized_EN.pdf">Резюме <span>PDF, EN</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="wrap">
+  <div>© 2026 Артём Иващенко · Разработчик полного цикла · Ташкент</div>
+  <nav>
+    <a href="/en/">English</a>
+    <a href="/projects/">Проекты</a>
+    <a href="/cv/">CV</a>
+    <a href="/contact/">Контакты</a>
+  </nav>
+</footer>
+
+</body>
+</html>
